@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+   
+</head>
+<body>
+
+
+   <form name="myform" onsubmit="return myfun()">
+
+        <label for="fname"> UserName</label>
+        <input type="text" name="name"  onkeyup="myfun()" placeholder="Your name.. " value="">
+        <span id="nammsg"></span><br>
+   
+
+      
+<label for="fname">Phone No.</label>
+        <input type="text" name="phone" onkeyup="myfun()" placeholder="Your phone no.." value="">
+      <span id="phnmsg"></span><br>
+
+
+
+       <label for="fname">Alternate Phone No.</label>
+        <input type="text" name="alterphone" onkeyup="myfun()" placeholder="Your alternate phone no..(optional)" value=""><br><br>
+        <span id="altmsg"></span><br>
+         
+        <label for="fname" >Address Type.</label><br>
+        <input type="radio" name="rdio" >Home (All day delivery)<br>
+        <input type="radio"  name="rdio"  > Work(Delivery between 10am-5pm)<br><br>
+        <span id="ridmsg"></span><br>
+
+
+        <label for="fname">Select City:</label>
+        <select id="city" onchange="ChangeCarList()"  name="sel"> 
+                <option value="">Please Select City </option> 
+                <option value="morena">morena</option> 
+                <option value="gwalior">Gwalior</option> 
+                <option value="pune">pune</option> 
+              </select> 
+              <span id="nammsg1" ></span><br>
+
+
+
+              <label for="fname">Select Pincode:</label>
+ 
+              <select id="pincode">
+                <option value="">Please Select Pincode</option> 
+              </select> 
+
+       
+        <input type="submit" value="Submit">
+   </form> 
+</body>
+</html>
