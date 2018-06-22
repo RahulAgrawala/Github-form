@@ -5,6 +5,8 @@
         var b =document.myform.name.value;
         var c=document.myform.alterphone.value;
         var d= document.myform.rdio;
+        var p=document.myform.pass.value;
+        var q=document.myform.confirmpass.value;
 
         //name valiation
       var correct=/^[a-zA-Z ]*$/;
@@ -20,12 +22,54 @@ document.getElementById("nammsg").innerHTML="only  alphabets are allows:";
   return false;
 
 }
-
+ 
+//validation of email...
 if(e=="")
 {
 document.getElementById("eml").innerHTML="please fill Email .";
 return false;
 }
+//validation of password....
+if(p==""){
+  document.getElementById("password").innerHTML="please fill the password";
+  return false;
+  }
+  
+  
+  if(p.length<5)
+          {
+          document.getElementById("password").innerHTML="not less than 6character";
+          return false;
+         }
+        if(p.length>12)
+          {
+          document.getElementById("password").innerHTML="not more than 10 character";
+          return false;
+          } 
+          if(p.length==7 || p.length==8 || p.length==9 || p.length==10 )
+          {
+          document.getElementById("password").innerHTML="ok";
+         
+          } 
+  
+  if(q==""){
+  document.getElementById("confirm").innerHTML="please fill the confirm password";
+  return false;
+  }
+  //validation of confirm password....
+  if(p!=q)
+          {
+          document.getElementById("confirm").innerHTML="Password do not match";
+          return false;
+          }
+          if(p==q)
+          {
+          document.getElementById("confirm").innerHTML="ok";
+          return true;
+          }
+  
+  
+
 
 //validation of phone no....
 if(a=="")
