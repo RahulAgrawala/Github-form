@@ -1,6 +1,7 @@
 
       function myfun(){
         var a=document.myform.phone.value;
+        var e =document.myform.email.value;
         var b =document.myform.name.value;
         var c=document.myform.alterphone.value;
         var d= document.myform.rdio;
@@ -18,6 +19,12 @@ else{
 document.getElementById("nammsg").innerHTML="only  alphabets are allows:";
   return false;
 
+}
+
+if(e=="")
+{
+document.getElementById("eml").innerHTML="please fill Email .";
+return false;
 }
 
 //validation of phone no....

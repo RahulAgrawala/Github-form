@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script>
+
+function myfun(){
+
+    var e =document.myform.email.value;
+    if(e=="")
+        {
+        document.getElementById("phnmsg").innerHTML="please fill .";
+        return false;
+       }
+}
+
+
+</script>
+
+
+</head>
+<body>
+
+        <form name="myform" onsubmit="return myfun()">
+    
+    <label for="fname"> Email:</label>
+    <input type="email" name="email"  onkeyup="myfun()" placeholder="Your Email name.. " value="">
+    <span id="phnmsg"></span><br>
+
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
